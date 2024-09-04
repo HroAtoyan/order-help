@@ -1,0 +1,18 @@
+rootProject.name = 'order-help'
+
+
+
+
+include ':order-service-implementation'
+include ':order-service-interface'
+
+project(":order-service-implementation").projectDir = file("components/services/implementation")
+project(":order-service-interface").projectDir = file("components/services/interface")
+
+
+
+
+include ':api-utils'
+include ':exceptions'
+project(":api-utils").projectDir = file("components/common/api-utils")
+project(":exceptions").projectDir = file("components/common/exceptions")
